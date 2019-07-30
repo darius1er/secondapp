@@ -18,11 +18,11 @@ export class AppComponent {
     this.initializeApp();
   }
   menus : Menu[] = [
-                      {name:"Home", url:"/home", icon:"home", page:"HomePage"},
-                      {name:"Domaine", url:"/domaine", icon:"briefcase", page:"DomainPage"},
-                      {name:"Expert", url:"/expert", icon:"people", page:"ExpertPage"},
-                      {name:"Help", url:"/help", icon:"help", page:"DomainPage"},
-                      {name:"Sign-in", url:"/sign", icon:"log-in", page:"SignPage"}
+                      {name:"Home", url:"home", icon:"home", page:"HomePage"},
+                      {name:"Domaine", url:"domaine", icon:"briefcase", page:"DomainPage"},
+                      {name:"Expert", url:"expert", icon:"people", page:"ExpertPage"},
+                      {name:"Help", url:"help", icon:"help", page:"DomainPage"},
+                      {name:"Sign-in", url:"sign", icon:"log-in", page:"SignPage"}
                     ];
 
   initializeApp() {
