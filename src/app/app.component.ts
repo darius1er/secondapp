@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-
+import {Menu} from '../modele/menu-interface'
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +11,19 @@ import { MenuController } from '@ionic/angular';
 })
 export class AppComponent {
   constructor(
-    private menuCrtl : MenuController,
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
   ) {
     this.initializeApp();
   }
+  menus : Menu[] = [
+                      {name:"Home", url:"/home", icon:"home", page:"HomePage"},
+                      {name:"Domaine", url:"/domaine", icon:"briefcase", page:"DomainPage"},
+                      {name:"Expert", url:"/expert", icon:"people", page:"ExpertPage"},
+                      {name:"Help", url:"/help", icon:"help", page:"DomainPage"},
+                      {name:"Sign-in", url:"/sign", icon:"log-in", page:"SignPage"}
+                    ];
 
   initializeApp() {
     this.platform.ready().then(() => {
